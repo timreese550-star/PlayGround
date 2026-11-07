@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#101619">
+  <title>BLOCK BY BLOCK — Manhattan, 1986</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="game-shell">
+    <canvas id="game" aria-label="First-person view of a New York street"></canvas>
+    <div class="film-grain"></div>
+    <div class="topline"><span class="brand-mark">N</span><span>NEW YORK CITY</span><i></i><span>MANHATTAN · 1986</span><span class="radio">●&nbsp; NYPD RADIO <b>LIVE</b></span></div>
+    <div class="mission-card"><span class="eyebrow">DISTRICT 04&nbsp; / &nbsp;W 28TH ST</span><div class="mission-title">CLEAR THE<br><em>BLOCK</em></div><div class="mission-progress"><span id="progress-fill"></span></div><div class="mission-copy"><b id="targets-left">6</b> HOSTILES REMAINING <span>›</span></div></div>
+    <div class="minimap-frame"><div class="map-label">LOCAL GRID <span>● LIVE</span></div><canvas id="minimap" width="156" height="156"></canvas><div class="map-coords">W 28TH ST&nbsp; · &nbsp;7TH AVE</div></div>
+    <div class="objective-toast" id="toast">AREA SECURED <span>— PROCEED TO THE NEXT BLOCK</span></div>
+    <div class="crosshair" aria-hidden="true"><i></i><b></b></div>
+    <div class="hit-marker" id="hit-marker">×</div>
+    <div class="bottom-hud"><div class="health"><span class="hud-label">VITALS</span><div class="health-line"><span class="cross">+</span><div class="meter"><i id="health-fill"></i></div><b id="health-number">100</b></div></div><div class="status-pill"><span class="status-dot"></span> ON FOOT <i>·</i> MANHATTAN</div><div class="ammo"><span class="hud-label">SIDEARM <small>9MM</small></span><div class="ammo-line"><b id="ammo-now">12</b><span>/</span><i id="ammo-reserve">48</i><span class="ammo-icon">▰</span></div></div></div>
+    <div class="controls-hint"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> MOVE <span>·</span> <kbd>SHIFT</kbd> SPRINT <span>·</span> <kbd>CLICK</kbd> FIRE <span>·</span> <kbd>R</kbd> RELOAD <span>·</span> <kbd>ESC</kbd> RELEASE</div>
+    <div id="overlay" class="overlay">
+      <div class="overlay-panel">
+        <div class="patch">NYPD&nbsp; / &nbsp;PATROL DIVISION <span>★</span></div>
+        <div class="title-kicker">A CITY THAT NEVER</div>
+        <h1>BACKS<br><em>DOWN.</em></h1>
+        <p>One block at a time. Take back the streets of Manhattan.</p>
+        <button id="start-button"><span>START PATROL</span><b>→</b></button>
+        <div class="overlay-foot"><span>WASD TO MOVE</span><i>•</i><span>MOUSE TO LOOK</span><i>•</i><span>CLICK TO FIRE</span></div>
+      </div>
+      <div class="overlay-bottom"><span>NEW YORK CITY</span><span>42° 20′ 58″ N&nbsp; / &nbsp;73° 59′ 05″ W</span><span>EST. 1624</span></div>
+    </div>
+    <div id="mobile-controls" aria-hidden="true"><div class="mobile-pad"><button data-key="w">▲</button><div><button data-key="a">◀</button><button data-key="s">▼</button><button data-key="d">▶</button></div></div><div class="mobile-actions"><button id="mobile-fire">FIRE</button><button id="mobile-reload">↻</button></div></div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
